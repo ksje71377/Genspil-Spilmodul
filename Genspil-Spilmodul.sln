@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genspil-Spilmodul", "Genspil-Spilmodul\Genspil-Spilmodul.csproj", "{C6BFAE4F-FFB2-466A-9F09-9FADA6064D65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenspilTester", "GenspilTester\GenspilTester.csproj", "{A1DAF6C1-4E07-4F9F-AF58-DED8F8EBB772}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C6BFAE4F-FFB2-466A-9F09-9FADA6064D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6BFAE4F-FFB2-466A-9F09-9FADA6064D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6BFAE4F-FFB2-466A-9F09-9FADA6064D65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1DAF6C1-4E07-4F9F-AF58-DED8F8EBB772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1DAF6C1-4E07-4F9F-AF58-DED8F8EBB772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1DAF6C1-4E07-4F9F-AF58-DED8F8EBB772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1DAF6C1-4E07-4F9F-AF58-DED8F8EBB772}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
