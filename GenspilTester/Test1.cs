@@ -1,4 +1,5 @@
-﻿namespace GenspilTester
+﻿using Genspil_Spilmodul;
+namespace GenspilTester
 {
     [TestClass]
     public sealed class Test1
