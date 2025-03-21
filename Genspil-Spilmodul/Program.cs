@@ -1,58 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Net;
 using System.Runtime.InteropServices;
 
+
 namespace Genspil_Spilmodul
 
-{ 
-    //enum GameCondition repræsenterer et par faste værdier af "stand" som spillet kan være i.
-
-    //enum er (helt generelt i denne kode) valgt frem for Array, da det er ønsket at have statiske data, som ikke skal ændres..
-
-    public enum GameCondition
-    {
-        unused,
-        perfect,
-        good,
-        average,
-        poor,
-        repair,
-        unknown,
-    }
-
-    //enum GameState relaterer sig til spillets status. 
-
-    public enum GameState
-    {
-        inStock,
-        notInStock,
-        requested,
-        notDefined,
-    }
-
-    //enum ageRating relaterer sig til spillets aldersgrænse
-
-    public enum AgeRating
-    {
-        all,
-        three,
-        seven,
-        eleven,
-        fifteen,
-        eighteen,
-    }
-
-    //enum playerNumbers relaterer sig til spillets "fra"- antal spillere
-
-    public enum PlayerNumbers
-    {
-        zero,
-        two,
-        four,
-        six,
-        eight,
-    }
-
+{
     internal class Program
 
     {
@@ -60,8 +14,6 @@ namespace Genspil_Spilmodul
         //Start på programmet
 
         static void Main(string[] args)
-
-
 
         {
             //Instantierer nye elementer af klasserne GameManager og ClientManager for at kunne tilgå metoderne i disse klasser.
@@ -143,4 +95,3 @@ namespace Genspil_Spilmodul
         }
     }
 }
-
