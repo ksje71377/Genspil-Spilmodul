@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Genspil_Spilmodul
 {
-    using System;
-
     //I tråd med princippet om konceptuelle klasser foregår alt databehandling og manipulering af spil gennem klassen GameManager.
 
-    namespace Genspil_Spilmodul
-    {
         public class GameManager
         {
             //Method CreateGame opretter et nyt spil i lagerbeholdningen.
@@ -28,4 +24,3 @@ namespace Genspil_Spilmodul
             }
         }
     }
-}
