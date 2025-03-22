@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Genspil_Spilmodul.Genspil_Spilmodul;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
 using System.Runtime.InteropServices;
@@ -14,11 +15,16 @@ namespace Genspil_Spilmodul
         static void Main(string[] args)
 
         {
+
             //Instantierer nye elementer af klasserne GameManager og ClientManager for at kunne tilgå metoderne i disse klasser.
 
             GameManager gameManager = new GameManager();
             ClientManager clientManager = new ClientManager();
             MenuRetriever menuRetriever = new MenuRetriever();
+
+            //List auto-check med if-else statement. Eksisterer listen ikke, oprettes en ny liste automatisk. Eksisterer den, vil den blive indlæst således at data ikke overskrives.
+
+            gameManager.CreateList();
 
             //int gameMenuInput styrer input til menuvalget.
 
