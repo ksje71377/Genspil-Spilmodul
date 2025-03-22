@@ -8,9 +8,7 @@ namespace Genspil_Spilmodul
 
 {
     internal class Program
-
-    {
-
+    { 
         //Start på programmet
 
         static void Main(string[] args)
@@ -20,6 +18,7 @@ namespace Genspil_Spilmodul
 
             GameManager gameManager = new GameManager();
             ClientManager clientManager = new ClientManager();
+            MenuRetriever menuRetriever = new MenuRetriever();
 
             //int gameMenuInput styrer input til menuvalget.
 
@@ -28,26 +27,15 @@ namespace Genspil_Spilmodul
             //int loopControl sørger for at menulinjen kører igen ved afsluttelse af operation eller forkert input.
 
             int loopControl = 1;
-            int loopControlGame = 1;
 
             //Bruger præsenteres for en menu, hvori der med et numerisk input vælges ønsket funktion. Menuen kører i et do-while loop, da mængden af iterationer afhænger af brugerspecifikke omstændigheder.
 
             do
 
             {
+                //Henter metoden RetrieveMenu fra MenuRetriever klassen, som printer menuen til brugeren.
 
-                Console.WriteLine("\t****----- Spil -----****");
-                Console.WriteLine("\n\n\n\tAngiv, hvad du ønsker at gøre:");
-                Console.WriteLine("\n-------------------------------------------------\n");
-                Console.WriteLine("Tast det ønskede tal, og tryk på enter. Funktionen vil herefter aktiveres.\n");
-
-                Console.WriteLine("\t- 1. Opret spil i lagerbeholdning");
-                Console.WriteLine("\t- 2. Ret eller ændre spil i lagerbeholdning");
-
-                Console.WriteLine("\n\t- 3. Opret efterlysning på spil");
-                Console.WriteLine("\t- 4. Ret eller ændre efterlysning på spil");
-
-                Console.WriteLine("\n\t- 5. Tilbage til hovedmenu");
+                menuRetriever.RetrieveMenu();
 
                 //Læser brugerinput og konverterer til integer
 
@@ -61,7 +49,7 @@ namespace Genspil_Spilmodul
 
                     case 1:
 
-                        GameManager.CreateGame();
+
 
                         break;
 
@@ -79,6 +67,24 @@ namespace Genspil_Spilmodul
                         break;
 
                     case 5:
+                        //henter metode til at printe lagerbeholdning
+                        Console.WriteLine("\n\n\t****----- Lagerbeholdning -----****");
+                        Console.WriteLine("\nIkke implementeret.");
+                        Console.ReadKey();
+                        break;
+
+                    case 6:
+                        //henter metode til at slette diverse databaser.
+                        Console.WriteLine("\n\n\t****----- Slet database -----****");
+                        Console.WriteLine("\nADVARSEL - ved at slette database fjernes data PERMANENT.");
+                        Console.WriteLine("\n\tEr du sikker på, at du vil slette en database? Bekræft ved at taste \"slette\" og trykke på \"enter\".");
+                        if (Console.ReadLine().ToLower() == "slette")
+                        {
+                            Console.WriteLine("\n\tTast 1 efterfulgt af \"enter\" for at slette database for spil\n\tTast 2. efterfulgt af \"enter\" for at slette database for kunder.");
+                        }
+                        break;
+
+                    case 7:
                         //Ændrer loopControl variabel til 0, hvilket gør betingelsen falsk. Derved afsluttes løkken og der vendes retur til en eventuel hovedmenu
                         loopControl = 0;
                         break;

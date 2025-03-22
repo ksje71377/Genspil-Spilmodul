@@ -8,8 +8,6 @@ namespace Genspil_Spilmodul
 {
     //Klassen Client indeholder generel information om kunder
 
-    namespace Genspil_Spilmodul
-
 public class Client
     {
         //Variablerne er private, så de ikke kan tilgås direkte. 
