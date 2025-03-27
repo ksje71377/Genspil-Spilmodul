@@ -6,10 +6,6 @@ using System.Threading.Tasks;
 
 namespace Genspil_Spilmodul
 {
-    using System;
-
-    namespace Genspil_Spilmodul
-    {
 
         //enum GameCondition repræsenterer et par faste værdier af "stand" som spillet kan være i.
 
@@ -105,4 +101,4 @@ namespace Genspil_Spilmodul
             }
         }
     }
-}
+

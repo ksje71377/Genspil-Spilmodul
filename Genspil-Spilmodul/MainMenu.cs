@@ -10,10 +10,6 @@ namespace Genspil_Spilmodul
     {
         public void RetrieveMenu()
         {
-            Console.WriteLine("\t****----- Spil -----****");
-            Console.WriteLine("\n\n\n\tAngiv, hvad du ønsker at gøre:");
-            Console.WriteLine("\n-------------------------------------------------\n");
-            Console.WriteLine("Tast det ønskede tal, og tryk på enter. Funktionen vil herefter aktiveres.\n");
 
             //Henter metoder fra GameManager klassen
 
@@ -27,11 +23,21 @@ namespace Genspil_Spilmodul
 
             Console.WriteLine("\n\t- 5. Print lagerbeholdning");
 
-            //Sletter vores list<t> gameList, som er vores lagerbeholdning
 
-            Console.WriteLine("\n\t- 6. Slet database");
 
             Console.WriteLine("\n\t- 7. Afslut programmet");
+            Console.WriteLine("\n-------------------------------------------------");
+            Console.WriteLine("\nAndre funktioner:");
+            Console.WriteLine("\n-------------------------------------------------\n");
+            
+            //Hvis man ønsker at rette manuelt i kundekartoteket. 
+
+            Console.WriteLine("\n\t- 10. Tilgå kundekartoteket manuelt");
+            
+            //Sletter vores list<t> gameList, som er vores lagerbeholdning, eller kundedatabasen. 
+
+            Console.WriteLine("\n\t- 11. Slet database(r)");
+            Console.WriteLine("\n-------------------------------------------------\n");
         }
     }
 }

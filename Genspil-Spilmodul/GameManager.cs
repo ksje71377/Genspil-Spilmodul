@@ -1,5 +1,4 @@
-﻿using Genspil_Spilmodul.Genspil_Spilmodul;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,15 +8,25 @@ namespace Genspil_Spilmodul
 {
     //I tråd med princippet om konceptuelle klasser foregår alt databehandling og manipulering af spil gennem klassen GameManager.
 
+        //Game liste deklareres 
+        
         public class GameManager
         {
 
         private List<Game> gameList;
 
+        //Følgende metoder tilføjer brugerinput til VARIABLER:
 
-        //Metoden CreateList opretter en ny liste til spil.
+        public void SetGameName()
+        {
+            //Metoden sætter navn på spil.
+        }
 
-        public void CreateList()
+        //Følgende metoder relaterer sig til LISTER:
+
+        //Metoden CreateGameList opretter en ny liste til spil.
+
+        public void CreateGameList()
         {
 
             //Metoden opretter en ny liste til spil.
@@ -32,7 +41,7 @@ namespace Genspil_Spilmodul
 
             if (gameList == null)
             {
-                CreateList();
+                CreateGameList();
 
                 Game game = new Game();
                 gameList.Add(new Game());

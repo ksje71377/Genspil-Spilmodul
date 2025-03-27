@@ -46,7 +46,7 @@ public class Client
             get { return email; }
             set
             {
-                if (value.Contains("@"))
+                if (!value.Contains("@"))
                 {
                     throw new ArgumentException("Du kan ikke have en e-mail som ikke indeholder et @.");
                 }
@@ -54,25 +54,38 @@ public class Client
             }
         }
 
-        //Afviser input uden telefonnummer
+public int nPhoneNumber
+{
+    get { return phoneNumber; }
+    set
+    {
+        // Tjek om nummeret er et gyldigt 8-cifret telefonnummer
 
-        public int nPhoneNumber
+        if (value < 20000000 || value > 99999999)
         {
-            get { return phoneNumber; }
-            set
-            {
-                if (value > 20000000)
-                {
-                    throw new ArgumentException("FEJL. Telefonnummeret er ikke et gyldigt format");
-                }
-                phoneNumber = value;
-            }
+            throw new ArgumentException("FEJL. Telefonnummeret er ikke et gyldigt format");
         }
+        phoneNumber = value; // Gem telefonnummeret, hvis det er gyldigt
+    }
+}
 
         public string nCity
         { get; set; }
+
         public int nPostalCode
-        { get; set; }
+        {
+            get { return postalCode; }
+            set
+            {
+                //Postnr skal være mellem 1000 og 9999 for at være gyldigt:
+
+                if (value < 1000 || value > 9999)
+                {
+                    throw new ArgumentException("FEJL. Postnr er ikke et gyldigt format");
+                }
+                postalCode = value; // Gem postnummeret
+            }
+        }
 
 
         //Constructor Client definerer standardværdier for en ny kunde i tilfælde af blankt input

@@ -1,5 +1,4 @@
-﻿using Genspil_Spilmodul.Genspil_Spilmodul;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
 using System.Runtime.InteropServices;
@@ -21,10 +20,11 @@ namespace Genspil_Spilmodul
             GameManager gameManager = new GameManager();
             ClientManager clientManager = new ClientManager();
             MenuRetriever menuRetriever = new MenuRetriever();
+            ClientMenu clientMenu = new ClientMenu();
+            GameMenu gameMenu = new GameMenu();
+            DatabaseMenu databaseMenu = new DatabaseMenu();
 
-            //List auto-check med if-else statement. Eksisterer listen ikke, oprettes en ny liste automatisk. Eksisterer den, vil den blive indlæst således at data ikke overskrives.
 
-            gameManager.CreateList();
 
             //int gameMenuInput styrer input til menuvalget.
 
@@ -39,6 +39,17 @@ namespace Genspil_Spilmodul
             do
 
             {
+                //Renser skærm for forrige menulinjer.
+
+                Console.Clear();
+
+                //Starter menuen for spilmodul
+
+                Console.WriteLine("\t****----- Spil -----****");
+                Console.WriteLine("\n\tAngiv, hvad du ønsker at gøre:");
+                Console.WriteLine("\n-------------------------------------------------\n");
+                Console.WriteLine("Tast det ønskede tal, og tryk på enter. Funktionen vil herefter aktiveres.\n");
+
                 //Henter metoden RetrieveMenu fra MenuRetriever klassen, som printer menuen til brugeren.
 
                 menuRetriever.RetrieveMenu();
@@ -74,25 +85,27 @@ namespace Genspil_Spilmodul
 
                     case 5:
                         //henter metode til at printe lagerbeholdning
-                        Console.WriteLine("\n\n\t****----- Lagerbeholdning -----****");
-                        Console.WriteLine("\nIkke implementeret.");
-                        Console.ReadKey();
-                        break;
 
-                    case 6:
-                        //henter metode til at slette diverse databaser.
-                        Console.WriteLine("\n\n\t****----- Slet database -----****");
-                        Console.WriteLine("\nADVARSEL - ved at slette database fjernes data PERMANENT.");
-                        Console.WriteLine("\n\tEr du sikker på, at du vil slette en database? Bekræft ved at taste \"slette\" og trykke på \"enter\".");
-                        if (Console.ReadLine().ToLower() == "slette")
-                        {
-                            Console.WriteLine("\n\tTast 1 efterfulgt af \"enter\" for at slette database for spil\n\tTast 2. efterfulgt af \"enter\" for at slette database for kunder.");
-                        }
+                        Console.ReadKey();
                         break;
 
                     case 7:
                         //Ændrer loopControl variabel til 0, hvilket gør betingelsen falsk. Derved afsluttes løkken og der vendes retur til en eventuel hovedmenu
                         loopControl = 0;
+                        break;
+
+                    case 10:
+                        //henter metode til at tilgå kundekartoteket manuelt
+
+                        clientMenu.RetrieveClientMenu();
+
+                        break;
+
+                    case 11:
+
+                        //henter metode til at slette database(r)
+
+                        databaseMenu.RetrieveDatabaseMenu();
                         break;
 
                     default:
