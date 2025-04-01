@@ -12,9 +12,10 @@ namespace Genspil_Spilmodul
         {
             //henter metode til at slette diverse databaser.
             Console.Clear();
+            Console.WriteLine("-----------------------------------------------------------------------------");
+            Console.WriteLine("\n\n\tSlet database");
+            Console.WriteLine("-----------------------------------------------------------------------------");
 
-        Console.WriteLine("\n\n\t****----- Slet database -----****");
-                        
             Console.ForegroundColor = ConsoleColor.Red;
             Console.BackgroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\nADVARSEL - ved at slette database fjernes data PERMANENT.");

@@ -26,10 +26,10 @@ namespace Genspil_Spilmodul
 
 
             Console.WriteLine("\n\t- 7. Afslut programmet");
-            Console.WriteLine("\n-------------------------------------------------");
+            Console.WriteLine("\n-----------------------------------------------------------------------------");
             Console.WriteLine("\nAndre funktioner:");
-            Console.WriteLine("\n-------------------------------------------------\n");
-            
+            Console.WriteLine("\n-----------------------------------------------------------------------------");
+
             //Hvis man ønsker at rette manuelt i kundekartoteket. 
 
             Console.WriteLine("\n\t- 10. Tilgå kundekartoteket manuelt");
@@ -37,7 +37,7 @@ namespace Genspil_Spilmodul
             //Sletter vores list<t> gameList, som er vores lagerbeholdning, eller kundedatabasen. 
 
             Console.WriteLine("\n\t- 11. Slet database(r)");
-            Console.WriteLine("\n-------------------------------------------------\n");
+            Console.WriteLine("\n-----------------------------------------------------------------------------");
         }
     }
 }

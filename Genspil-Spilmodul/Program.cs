@@ -44,8 +44,12 @@ namespace Genspil_Spilmodul
                 Console.Clear();
 
                 //Starter menuen for spilmodul
-
-                Console.WriteLine("\t****----- Spil -----****");
+                Console.WriteLine("-----------------------------------------------------------------------------");
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.WriteLine("\tGenspil - Unik software");
+                Console.ResetColor();
+                Console.WriteLine("-----------------------------------------------------------------------------");
                 Console.WriteLine("\n\tAngiv, hvad du ønsker at gøre:");
                 Console.WriteLine("\n-------------------------------------------------\n");
                 Console.WriteLine("Tast det ønskede tal, og tryk på enter. Funktionen vil herefter aktiveres.\n");

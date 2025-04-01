@@ -19,8 +19,9 @@ namespace Genspil_Spilmodul
             //Clearer konsollen så der ikke er så meget "støj" på skærmen.
 
             Console.Clear();
-
-            Console.WriteLine("\t****----- Kundekartotek -----****");
+            Console.WriteLine("\n-----------------------------------------------------------------------------");
+            Console.WriteLine("Kundekartotek");
+            Console.WriteLine("\n-----------------------------------------------------------------------------");
             Console.WriteLine("\n\n\n\tAngiv, hvad du ønsker at gøre:");
             Console.WriteLine("\n-------------------------------------------------\n");
             Console.WriteLine("Tast det ønskede tal, og tryk på enter. Funktionen vil herefter aktiveres.\n");
@@ -45,8 +46,9 @@ namespace Genspil_Spilmodul
                 case 1:
                     Console.Clear();
 
-
-                    Console.WriteLine("\t****----- Opret ny kunde -----****");
+                    Console.WriteLine("-----------------------------------------------------------------------------");
+                    Console.WriteLine("Opret ny kunde");
+                    Console.WriteLine("-----------------------------------------------------------------------------");
                     Console.WriteLine("\n\t- Tast '1' og Enter for at begynde processen.");
 
                         Client newClient = clientManager.PrepareNewClient();
@@ -87,7 +89,8 @@ namespace Genspil_Spilmodul
                     clientManager.DeleteClient();
                     break;
                 case 5:
-                    clientManager.PrintList();
+                    clientManager.PrintListClient();
+                    break;
             }
         }
 }
