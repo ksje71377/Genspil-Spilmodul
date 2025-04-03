@@ -66,6 +66,7 @@ namespace Genspil_Spilmodul
             private int condition;
             private int ageRating;
             private int playerNumbers;
+            private int id;
             public string nTitle
             {
                 get { return title; }
@@ -94,7 +95,43 @@ namespace Genspil_Spilmodul
             { get; set; }
             public string nDeveloper
             { get; set; }
-            public Game()
+        public int nCondition
+        {
+            get { return condition; }
+            set
+            {
+                if (value < 0 || value > 6)
+                {
+                    throw new ArgumentException("FEJL. Vælg et gyldigt nummer fra 0-6.");
+                }
+                condition = value;
+            }
+        }
+        public int nAgeRating
+        {
+            get { return ageRating; }
+            set
+            {
+                if (value < 0 || value > 5)
+                {
+                    throw new ArgumentException("FEJL. Vælg et gyldigt nummer fra 0-5.");
+                }
+                ageRating = value;
+            }
+        }
+        public int nPlayerNumbers
+        {
+            get { return playerNumbers; }
+            set
+            {
+                if (value < 0 || value > 4)
+                {
+                    throw new ArgumentException("FEJL. Vælg et gyldigt nummer fra 0-4.");
+                }
+                playerNumbers = value;
+            }
+        }
+        public Game()
             {
                 nGenre = "Not defined";
                 nDeveloper = "Not defined";

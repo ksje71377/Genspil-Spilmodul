@@ -109,36 +109,9 @@ namespace Genspil_Spilmodul
         {
             //Sletter en kunde i databasen
         }
-        public void PrintListClient()
-        {
-            if (clientList == null)
-            {
-                Console.WriteLine("Client list is null.");
-                return;
-            }
-
-            if (clientList.Count == 0)
-            {
-                Console.WriteLine("No clients in the list.");
-                return;
-            }
-
-            Console.WriteLine($"Total clients: {clientList.Count}");
-
-            for (int i = 0; i < clientList.Count; i++)
-            {
-                Console.WriteLine($"Client {i + 1}:");
-                Console.WriteLine($"Name: {clientList[i].nName}");
-                Console.WriteLine($"Phone: {clientList[i].nPhoneNumber}");
-                Console.WriteLine($"Address: {clientList[i].nAddress}");
-                Console.WriteLine($"City: {clientList[i].nCity}");
-                Console.WriteLine($"Postal Code: {clientList[i].nPostalCode}");
-                Console.WriteLine($"Email: {clientList[i].nEmail}");
-                Console.WriteLine(); // Empty line between clients
-            }
         }
     }
-    }
+    
     
    
     
